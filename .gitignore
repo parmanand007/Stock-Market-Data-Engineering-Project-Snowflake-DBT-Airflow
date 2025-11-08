@@ -1,0 +1,130 @@
+# ------------------------------
+# General
+# ------------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Python
+# ------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.env/
+env/
+.venv/
+ENV/
+Pipfile.lock
+poetry.lock
+
+# ------------------------------
+# Airflow
+# ------------------------------
+# Airflow local files (logs, SQLite DB, plugins cache)
+airflow_home/
+airflow.db
+logs/
+dags/__pycache__/
+dags/*.pyc
+plugins/__pycache__/
+unittests.cfg
+airflow-webserver.pid
+airflow.cfg
+webserver_config.py
+.astro/
+
+# ------------------------------
+# dbt
+# ------------------------------
+# dbt compiled & target artifacts
+dbt_modules/
+target/
+dbt_packages/
+logs/
+manifest.json
+run_results.json
+dbt_project.lock
+profiles.yml  # Usually contains Snowflake credentials — keep it local!
+
+# ------------------------------
+# Kafka
+# ------------------------------
+# Kafka/Zookeeper local volumes (if running via Docker)
+kafka-data/
+zookeeper-data/
+zookeeper-log/
+kafka-logs/
+tmp/
+
+# ------------------------------
+# Docker
+# ------------------------------
+# Docker artifacts
+*.pid
+*.tar
+docker-compose.override.yml
+.dockerignore
+.env.docker
+.env.prod
+.env.local
+
+# Named volumes (if mounted locally)
+volumes/
+data/
+tmpdata/
+
+# ------------------------------
+# Snowflake credentials and secrets
+# ------------------------------
+# Never commit credentials or private keys
+*.pem
+*.key
+*.crt
+*.creds
+*.json
+*.yaml
+*.yml
+credentials/
+.secrets/
+.env
+.env.*
+
+# ------------------------------
+# Jupyter / notebooks
+# ------------------------------
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+*.ipynb
+
+# ------------------------------
+# IDE & Editor specific
+# ------------------------------
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------
+# OS specific
+# ------------------------------
+*.bak
+*.tmp
+*.swp
+*.swo
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
